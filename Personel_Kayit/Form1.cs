@@ -19,7 +19,12 @@ namespace Personel_Kayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
+        }
 
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
         }
     }
 }
