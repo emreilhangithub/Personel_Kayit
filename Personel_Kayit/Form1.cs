@@ -35,7 +35,7 @@ namespace Personel_Kayit
         {
             baglanti.Open(); //baglanti ac
             SqlCommand komut = new SqlCommand(
-                "insert into Tbl_Personel (PerAd,PerSoyad,PerSehir,PerMaas,PerMeslek) values(@p1,@p2,@p3,@p4,@p5)",baglanti);
+                "insert into Tbl_Personel (PerAd,PerSoyad,PerSehir,PerMaas,PerMeslek,PerDurum) values(@p1,@p2,@p3,@p4,@p5,@p6)",baglanti);
             //sql komut nesnesi ürettik  //@p1 parametre belirttik
 
             komut.Parameters.AddWithValue("@p1",TxtAd.Text);
@@ -43,6 +43,7 @@ namespace Personel_Kayit
             komut.Parameters.AddWithValue("@p3",CmbSehir.Text);
             komut.Parameters.AddWithValue("@p4",MskMaas.Text);
             komut.Parameters.AddWithValue("@p5",TxtMeslek.Text);
+            komut.Parameters.AddWithValue("@p6",label1.Text);
             //komut nesnesinden gelen parametrelerin değer olarak ekle virgülen once parametre ad vir sonra nerden alacagını
 
             komut.ExecuteNonQuery(); //sorguyu calıştır
@@ -50,6 +51,16 @@ namespace Personel_Kayit
             baglanti.Close(); //baglanti kapat
             MessageBox.Show("Personel Başarıyla Eklendi");
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Text = "True";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Text = "False";
         }
     }
 }
