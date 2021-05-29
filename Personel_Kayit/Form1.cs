@@ -21,6 +21,20 @@ namespace Personel_Kayit
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-E9UTSVL;Initial Catalog=PersonelVeriTabani;Integrated Security=True");
         
 
+        void Temizle()
+        {
+            Txtid.Text = "";
+            TxtAd.Text = "";
+            TxtSoyad.Text = "";
+            TxtMeslek.Text = "";
+            MskMaas.Text = "";
+            CmbSehir.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            TxtAd.Focus();
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
@@ -61,6 +75,11 @@ namespace Personel_Kayit
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             label1.Text = "False";
+        }
+
+        private void BtnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 }

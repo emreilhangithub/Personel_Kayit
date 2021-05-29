@@ -276,6 +276,7 @@ namespace Personel_Kayit
             this.BtnTemizle.TabIndex = 4;
             this.BtnTemizle.Text = "Temizle";
             this.BtnTemizle.UseVisualStyleBackColor = true;
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
             // BtnGuncelle
             // 
