@@ -70,6 +70,26 @@ namespace Personel_Kayit
             }
             baglanti.Close();
 
+            //Toplam Maaş
+            baglanti.Open();
+            SqlCommand komut5 = new SqlCommand("select sum(PerMaas) from Tbl_Personel", baglanti);
+            SqlDataReader dr5 = komut5.ExecuteReader();
+            while (dr5.Read())
+            {
+                LblToplamMaas.Text = dr5[0].ToString();
+            }
+            baglanti.Close();
+
+            //Ortlama Maaş
+            baglanti.Open();
+            SqlCommand komut6 = new SqlCommand("select avg(PerMaas) from Tbl_Personel", baglanti);
+            SqlDataReader dr6 = komut6.ExecuteReader();
+            while (dr6.Read())
+            {
+                LblOrtalamaMaas.Text = dr6[0].ToString();
+            }
+            baglanti.Close();
+
         }
     }
 }
