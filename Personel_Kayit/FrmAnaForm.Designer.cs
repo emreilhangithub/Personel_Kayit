@@ -1,7 +1,7 @@
 ﻿
 namespace Personel_Kayit
 {
-    partial class Form1
+    partial class FrmAnaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Personel_Kayit
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.MskMaas = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();

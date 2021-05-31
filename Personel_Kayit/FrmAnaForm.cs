@@ -11,9 +11,9 @@ using System.Data.SqlClient;  //sql kütüphanesini cagırmamız lazım
 
 namespace Personel_Kayit
 {
-    public partial class Form1 : Form
+    public partial class FrmAnaForm : Form
     {
-        public Form1()
+        public FrmAnaForm()
         {
             InitializeComponent();
         }
