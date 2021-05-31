@@ -39,6 +39,28 @@ namespace Personel_Kayit
             }
 
             baglanti.Close();
+
+            //Evli Personel sayısı
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("select count(*) from Tbl_Personel where PerDurum = 1", baglanti);
+            SqlDataReader dr2 = komut2.ExecuteReader();
+            while (dr2.Read())
+            {                
+                LblEvliPersonel.Text = dr2[0].ToString();
+            }
+            baglanti.Close();
+
+            //Bekar Personel sayısı
+            baglanti.Open();
+            SqlCommand komut3 = new SqlCommand("select count(*) from Tbl_Personel where PerDurum = 0", baglanti);
+            SqlDataReader dr3 = komut3.ExecuteReader();
+            while (dr3.Read())
+            {
+                LblBekarPersonel.Text = dr3[0].ToString();
+            }
+
+            baglanti.Close();
+
         }
     }
 }
