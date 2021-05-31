@@ -153,5 +153,11 @@ namespace Personel_Kayit
             
             MessageBox.Show("Personel bilgileri başarı bir şekilde güncellendi");
         }
+
+        private void Btnistatistik_Click(object sender, EventArgs e)
+        {
+            Frmistatistik fr = new Frmistatistik();
+            fr.Show();
+        }
     }
 }
