@@ -258,6 +258,7 @@ namespace Personel_Kayit
             this.BtnGrafikler.TabIndex = 6;
             this.BtnGrafikler.Text = "Grafikler";
             this.BtnGrafikler.UseVisualStyleBackColor = true;
+            this.BtnGrafikler.Click += new System.EventHandler(this.BtnGrafikler_Click);
             // 
             // Btnistatistik
             // 
@@ -442,7 +443,7 @@ namespace Personel_Kayit
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form1
+            // FrmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -455,7 +456,7 @@ namespace Personel_Kayit
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Form1";
+            this.Name = "FrmAnaForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
