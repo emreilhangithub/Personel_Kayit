@@ -58,7 +58,16 @@ namespace Personel_Kayit
             {
                 LblBekarPersonel.Text = dr3[0].ToString();
             }
+            baglanti.Close();
 
+            //Şehir sayısı
+            baglanti.Open();
+            SqlCommand komut4 = new SqlCommand("select count(distinct(PerSehir)) from Tbl_Personel", baglanti);
+            SqlDataReader dr4 = komut4.ExecuteReader();
+            while (dr4.Read())
+            {
+                LblSehirSayisi.Text = dr4[0].ToString();
+            }
             baglanti.Close();
 
         }
