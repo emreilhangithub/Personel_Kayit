@@ -57,10 +57,6 @@ namespace Personel_Kayit
             this.BtnListele = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
-            this.tblPersonelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
             this.peridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +64,18 @@ namespace Personel_Kayit
             this.perMaasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perDurumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.perMeslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblPersonelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -107,7 +107,7 @@ namespace Personel_Kayit
             this.MskMaas.Location = new System.Drawing.Point(122, 182);
             this.MskMaas.Mask = "0000";
             this.MskMaas.Name = "MskMaas";
-            this.MskMaas.Size = new System.Drawing.Size(138, 31);
+            this.MskMaas.Size = new System.Drawing.Size(138, 42);
             this.MskMaas.TabIndex = 5;
             this.MskMaas.ValidatingType = typeof(int);
             // 
@@ -116,7 +116,7 @@ namespace Personel_Kayit
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 178);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 23);
+            this.label7.Size = new System.Drawing.Size(82, 36);
             this.label7.TabIndex = 14;
             this.label7.Text = "Maaş";
             // 
@@ -124,7 +124,7 @@ namespace Personel_Kayit
             // 
             this.TxtMeslek.Location = new System.Drawing.Point(122, 252);
             this.TxtMeslek.Name = "TxtMeslek";
-            this.TxtMeslek.Size = new System.Drawing.Size(138, 31);
+            this.TxtMeslek.Size = new System.Drawing.Size(138, 42);
             this.TxtMeslek.TabIndex = 6;
             // 
             // radioButton2
@@ -132,7 +132,7 @@ namespace Personel_Kayit
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(185, 219);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 27);
+            this.radioButton2.Size = new System.Drawing.Size(112, 40);
             this.radioButton2.TabIndex = 12;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Bekar";
@@ -144,7 +144,7 @@ namespace Personel_Kayit
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(122, 219);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 27);
+            this.radioButton1.Size = new System.Drawing.Size(85, 40);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Evli";
@@ -156,7 +156,7 @@ namespace Personel_Kayit
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 23);
+            this.label6.Size = new System.Drawing.Size(109, 36);
             this.label6.TabIndex = 10;
             this.label6.Text = "Meslek:";
             // 
@@ -165,7 +165,7 @@ namespace Personel_Kayit
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.Size = new System.Drawing.Size(107, 36);
             this.label5.TabIndex = 9;
             this.label5.Text = "Durum:";
             // 
@@ -174,7 +174,7 @@ namespace Personel_Kayit
             this.CmbSehir.FormattingEnabled = true;
             this.CmbSehir.Location = new System.Drawing.Point(122, 144);
             this.CmbSehir.Name = "CmbSehir";
-            this.CmbSehir.Size = new System.Drawing.Size(138, 31);
+            this.CmbSehir.Size = new System.Drawing.Size(138, 44);
             this.CmbSehir.TabIndex = 4;
             // 
             // label4
@@ -182,7 +182,7 @@ namespace Personel_Kayit
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.Size = new System.Drawing.Size(87, 36);
             this.label4.TabIndex = 6;
             this.label4.Text = "Şehir:";
             // 
@@ -190,7 +190,7 @@ namespace Personel_Kayit
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(122, 106);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(138, 31);
+            this.TxtSoyad.Size = new System.Drawing.Size(138, 42);
             this.TxtSoyad.TabIndex = 3;
             // 
             // label3
@@ -198,7 +198,7 @@ namespace Personel_Kayit
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.Size = new System.Drawing.Size(101, 36);
             this.label3.TabIndex = 4;
             this.label3.Text = "Soyad:";
             // 
@@ -206,7 +206,7 @@ namespace Personel_Kayit
             // 
             this.TxtAd.Location = new System.Drawing.Point(122, 68);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(138, 31);
+            this.TxtAd.Size = new System.Drawing.Size(138, 42);
             this.TxtAd.TabIndex = 2;
             // 
             // label2
@@ -214,7 +214,7 @@ namespace Personel_Kayit
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 23);
+            this.label2.Size = new System.Drawing.Size(59, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ad:";
             // 
@@ -222,7 +222,7 @@ namespace Personel_Kayit
             // 
             this.Txtid.Location = new System.Drawing.Point(122, 30);
             this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(138, 31);
+            this.Txtid.Size = new System.Drawing.Size(138, 42);
             this.Txtid.TabIndex = 1;
             // 
             // label15
@@ -230,7 +230,7 @@ namespace Personel_Kayit
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 23);
+            this.label15.Size = new System.Drawing.Size(149, 36);
             this.label15.TabIndex = 0;
             this.label15.Text = "Personel id";
             // 
@@ -340,10 +340,79 @@ namespace Personel_Kayit
             this.perMeslekDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblPersonelBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 38);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 166);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(750, 155);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // peridDataGridViewTextBoxColumn
+            // 
+            this.peridDataGridViewTextBoxColumn.DataPropertyName = "Perid";
+            this.peridDataGridViewTextBoxColumn.HeaderText = "Perid";
+            this.peridDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.peridDataGridViewTextBoxColumn.Name = "peridDataGridViewTextBoxColumn";
+            this.peridDataGridViewTextBoxColumn.ReadOnly = true;
+            this.peridDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perAdDataGridViewTextBoxColumn
+            // 
+            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perSoyadDataGridViewTextBoxColumn
+            // 
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perSehirDataGridViewTextBoxColumn
+            // 
+            this.perSehirDataGridViewTextBoxColumn.DataPropertyName = "PerSehir";
+            this.perSehirDataGridViewTextBoxColumn.HeaderText = "PerSehir";
+            this.perSehirDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.perSehirDataGridViewTextBoxColumn.Name = "perSehirDataGridViewTextBoxColumn";
+            this.perSehirDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perMaasDataGridViewTextBoxColumn
+            // 
+            this.perMaasDataGridViewTextBoxColumn.DataPropertyName = "PerMaas";
+            this.perMaasDataGridViewTextBoxColumn.HeaderText = "PerMaas";
+            this.perMaasDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.perMaasDataGridViewTextBoxColumn.Name = "perMaasDataGridViewTextBoxColumn";
+            this.perMaasDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perDurumDataGridViewCheckBoxColumn
+            // 
+            this.perDurumDataGridViewCheckBoxColumn.DataPropertyName = "PerDurum";
+            this.perDurumDataGridViewCheckBoxColumn.HeaderText = "PerDurum";
+            this.perDurumDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.perDurumDataGridViewCheckBoxColumn.Name = "perDurumDataGridViewCheckBoxColumn";
+            this.perDurumDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // perMeslekDataGridViewTextBoxColumn
+            // 
+            this.perMeslekDataGridViewTextBoxColumn.DataPropertyName = "PerMeslek";
+            this.perMeslekDataGridViewTextBoxColumn.HeaderText = "PerMeslek";
+            this.perMeslekDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.perMeslekDataGridViewTextBoxColumn.Name = "perMeslekDataGridViewTextBoxColumn";
+            this.perMeslekDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tblPersonelBindingSource
+            // 
+            this.tblPersonelBindingSource.DataMember = "Tbl_Personel";
+            this.tblPersonelBindingSource.DataSource = this.personelVeriTabaniDataSet;
+            // 
+            // personelVeriTabaniDataSet
+            // 
+            this.personelVeriTabaniDataSet.DataSetName = "PersonelVeriTabaniDataSet";
+            this.personelVeriTabaniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -355,75 +424,24 @@ namespace Personel_Kayit
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // personelVeriTabaniDataSet
-            // 
-            this.personelVeriTabaniDataSet.DataSetName = "PersonelVeriTabaniDataSet";
-            this.personelVeriTabaniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblPersonelBindingSource
-            // 
-            this.tblPersonelBindingSource.DataMember = "Tbl_Personel";
-            this.tblPersonelBindingSource.DataSource = this.personelVeriTabaniDataSet;
-            // 
             // tbl_PersonelTableAdapter
             // 
             this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
-            // 
-            // peridDataGridViewTextBoxColumn
-            // 
-            this.peridDataGridViewTextBoxColumn.DataPropertyName = "Perid";
-            this.peridDataGridViewTextBoxColumn.HeaderText = "Perid";
-            this.peridDataGridViewTextBoxColumn.Name = "peridDataGridViewTextBoxColumn";
-            this.peridDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perAdDataGridViewTextBoxColumn
-            // 
-            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
-            // 
-            // perSoyadDataGridViewTextBoxColumn
-            // 
-            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
-            // 
-            // perSehirDataGridViewTextBoxColumn
-            // 
-            this.perSehirDataGridViewTextBoxColumn.DataPropertyName = "PerSehir";
-            this.perSehirDataGridViewTextBoxColumn.HeaderText = "PerSehir";
-            this.perSehirDataGridViewTextBoxColumn.Name = "perSehirDataGridViewTextBoxColumn";
-            // 
-            // perMaasDataGridViewTextBoxColumn
-            // 
-            this.perMaasDataGridViewTextBoxColumn.DataPropertyName = "PerMaas";
-            this.perMaasDataGridViewTextBoxColumn.HeaderText = "PerMaas";
-            this.perMaasDataGridViewTextBoxColumn.Name = "perMaasDataGridViewTextBoxColumn";
-            // 
-            // perDurumDataGridViewCheckBoxColumn
-            // 
-            this.perDurumDataGridViewCheckBoxColumn.DataPropertyName = "PerDurum";
-            this.perDurumDataGridViewCheckBoxColumn.HeaderText = "PerDurum";
-            this.perDurumDataGridViewCheckBoxColumn.Name = "perDurumDataGridViewCheckBoxColumn";
-            // 
-            // perMeslekDataGridViewTextBoxColumn
-            // 
-            this.perMeslekDataGridViewTextBoxColumn.DataPropertyName = "PerMeslek";
-            this.perMeslekDataGridViewTextBoxColumn.HeaderText = "PerMeslek";
-            this.perMeslekDataGridViewTextBoxColumn.Name = "perMeslekDataGridViewTextBoxColumn";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(571, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.Size = new System.Drawing.Size(90, 36);
             this.label1.TabIndex = 223;
             this.label1.Text = "label1";
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(790, 535);
@@ -442,9 +460,9 @@ namespace Personel_Kayit
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
