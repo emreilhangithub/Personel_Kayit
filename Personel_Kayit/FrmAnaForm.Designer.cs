@@ -33,6 +33,7 @@ namespace Personel_Kayit
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.MskMaas = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtMeslek = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -48,6 +49,7 @@ namespace Personel_Kayit
             this.Txtid = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.BtnGrafikler = new System.Windows.Forms.Button();
             this.Btnistatistik = new System.Windows.Forms.Button();
             this.BtnTemizle = new System.Windows.Forms.Button();
@@ -68,7 +70,7 @@ namespace Personel_Kayit
             this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,6 +83,7 @@ namespace Personel_Kayit
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.MskMaas);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.TxtMeslek);
             this.groupBox1.Controls.Add(this.radioButton2);
@@ -95,9 +98,9 @@ namespace Personel_Kayit
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Txtid);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(12, 23);
+            this.groupBox1.Location = new System.Drawing.Point(12, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(294, 298);
+            this.groupBox1.Size = new System.Drawing.Size(294, 319);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personel Kayıt";
@@ -110,6 +113,18 @@ namespace Personel_Kayit
             this.MskMaas.Size = new System.Drawing.Size(138, 31);
             this.MskMaas.TabIndex = 5;
             this.MskMaas.ValidatingType = typeof(int);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.TabIndex = 223;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label7
             // 
@@ -236,6 +251,7 @@ namespace Personel_Kayit
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.BtnGrafikler);
             this.groupBox2.Controls.Add(this.Btnistatistik);
             this.groupBox2.Controls.Add(this.BtnTemizle);
@@ -243,18 +259,28 @@ namespace Personel_Kayit
             this.groupBox2.Controls.Add(this.BtnSil);
             this.groupBox2.Controls.Add(this.BtnKaydet);
             this.groupBox2.Controls.Add(this.BtnListele);
-            this.groupBox2.Location = new System.Drawing.Point(334, 23);
+            this.groupBox2.Location = new System.Drawing.Point(334, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(214, 298);
+            this.groupBox2.Size = new System.Drawing.Size(214, 319);
             this.groupBox2.TabIndex = 222;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(17, 280);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 30);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Raporlar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BtnGrafikler
             // 
-            this.BtnGrafikler.Location = new System.Drawing.Point(16, 252);
+            this.BtnGrafikler.Location = new System.Drawing.Point(17, 243);
             this.BtnGrafikler.Name = "BtnGrafikler";
-            this.BtnGrafikler.Size = new System.Drawing.Size(179, 31);
+            this.BtnGrafikler.Size = new System.Drawing.Size(179, 30);
             this.BtnGrafikler.TabIndex = 6;
             this.BtnGrafikler.Text = "Grafikler";
             this.BtnGrafikler.UseVisualStyleBackColor = true;
@@ -262,9 +288,9 @@ namespace Personel_Kayit
             // 
             // Btnistatistik
             // 
-            this.Btnistatistik.Location = new System.Drawing.Point(16, 215);
+            this.Btnistatistik.Location = new System.Drawing.Point(17, 206);
             this.Btnistatistik.Name = "Btnistatistik";
-            this.Btnistatistik.Size = new System.Drawing.Size(179, 31);
+            this.Btnistatistik.Size = new System.Drawing.Size(179, 30);
             this.Btnistatistik.TabIndex = 5;
             this.Btnistatistik.Text = "İstatistik";
             this.Btnistatistik.UseVisualStyleBackColor = true;
@@ -272,9 +298,9 @@ namespace Personel_Kayit
             // 
             // BtnTemizle
             // 
-            this.BtnTemizle.Location = new System.Drawing.Point(16, 178);
+            this.BtnTemizle.Location = new System.Drawing.Point(17, 169);
             this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(179, 31);
+            this.BtnTemizle.Size = new System.Drawing.Size(179, 30);
             this.BtnTemizle.TabIndex = 4;
             this.BtnTemizle.Text = "Temizle";
             this.BtnTemizle.UseVisualStyleBackColor = true;
@@ -282,9 +308,9 @@ namespace Personel_Kayit
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(16, 141);
+            this.BtnGuncelle.Location = new System.Drawing.Point(17, 132);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(179, 31);
+            this.BtnGuncelle.Size = new System.Drawing.Size(179, 30);
             this.BtnGuncelle.TabIndex = 3;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
@@ -292,9 +318,9 @@ namespace Personel_Kayit
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(16, 104);
+            this.BtnSil.Location = new System.Drawing.Point(17, 95);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(179, 31);
+            this.BtnSil.Size = new System.Drawing.Size(179, 30);
             this.BtnSil.TabIndex = 2;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
@@ -302,9 +328,9 @@ namespace Personel_Kayit
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(16, 67);
+            this.BtnKaydet.Location = new System.Drawing.Point(17, 58);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(179, 31);
+            this.BtnKaydet.Size = new System.Drawing.Size(179, 30);
             this.BtnKaydet.TabIndex = 1;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
@@ -312,9 +338,9 @@ namespace Personel_Kayit
             // 
             // BtnListele
             // 
-            this.BtnListele.Location = new System.Drawing.Point(16, 30);
+            this.BtnListele.Location = new System.Drawing.Point(17, 21);
             this.BtnListele.Name = "BtnListele";
-            this.BtnListele.Size = new System.Drawing.Size(179, 31);
+            this.BtnListele.Size = new System.Drawing.Size(179, 30);
             this.BtnListele.TabIndex = 0;
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = true;
@@ -421,9 +447,9 @@ namespace Personel_Kayit
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(575, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(564, 97);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 224);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -432,16 +458,15 @@ namespace Personel_Kayit
             // 
             this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(571, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
-            this.label1.TabIndex = 223;
-            this.label1.Text = "label1";
-            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button2.Location = new System.Drawing.Point(564, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(211, 70);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Çıkış Yap";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmAnaForm
             // 
@@ -449,7 +474,7 @@ namespace Personel_Kayit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(790, 535);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -468,7 +493,6 @@ namespace Personel_Kayit
             ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -512,6 +536,8 @@ namespace Personel_Kayit
         private System.Windows.Forms.DataGridViewCheckBoxColumn perDurumDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
