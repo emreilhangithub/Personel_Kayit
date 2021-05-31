@@ -295,6 +295,7 @@ namespace Personel_Kayit
             this.BtnSil.TabIndex = 2;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
