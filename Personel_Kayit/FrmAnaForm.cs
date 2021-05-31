@@ -173,6 +173,8 @@ namespace Personel_Kayit
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FrmRaporlar frp = new FrmRaporlar();
+            frp.Show();
 
         }
     }
