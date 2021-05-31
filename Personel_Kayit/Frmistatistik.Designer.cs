@@ -155,6 +155,7 @@ namespace Personel_Kayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(348, 245);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -169,7 +170,7 @@ namespace Personel_Kayit
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Frmistatistik";
             this.Text = "Frmistatistik";
             this.Load += new System.EventHandler(this.Frmistatistik_Load);
