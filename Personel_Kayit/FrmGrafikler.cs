@@ -31,6 +31,16 @@ namespace Personel_Kayit
                 chart1.Series["Sehirler"].Points.AddXY(dr1[0],dr1[1]);
             }
             baglanti.Close();
+
+            //personel maaş ve meslek
+            baglanti.Open();
+            SqlCommand komutg2 = new SqlCommand("select PerMeslek,AVG(PerMaas) from Tbl_Personel GROUP BY PerMeslek", baglanti);
+            SqlDataReader dr2 = komutg2.ExecuteReader();
+            while (dr2.Read())
+            {
+                chart2.Series["Meslek-Maas"].Points.AddXY(dr2[0], dr2[1]);
+            }
+            baglanti.Close();
         }
     }
 }
