@@ -47,6 +47,25 @@ namespace Personel_Kayit
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
+            if
+                (
+                string.IsNullOrEmpty(TxtAd.Text) || string.IsNullOrEmpty(TxtSoyad.Text) || string.IsNullOrEmpty(CmbSehir.Text)
+                || string.IsNullOrEmpty(MskMaas.Text) || string.IsNullOrEmpty(TxtMeslek.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
+            if (radioButton1.Checked == false && radioButton2.Checked == false)
+            {
+                MessageBox.Show("Lütfen cinsiyet seçimi yapınız");
+                return;
+            }
+
+
+
+
             baglanti.Open(); //baglanti ac
             SqlCommand komut = new SqlCommand(
                 "insert into Tbl_Personel (PerAd,PerSoyad,PerSehir,PerMaas,PerMeslek,PerDurum) values(@p1,@p2,@p3,@p4,@p5,@p6)",baglanti);
@@ -124,6 +143,16 @@ namespace Personel_Kayit
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
+
+            if
+                (
+                string.IsNullOrEmpty(Txtid.Text)
+                )
+            {
+                MessageBox.Show("Lütfen id alanını eksiksiz doldurunuz");
+                return;
+            }
+
             baglanti.Open();
             SqlCommand komutsil = new SqlCommand(
                "Delete From Tbl_Personel where Perid = @k1", baglanti);
@@ -135,6 +164,16 @@ namespace Personel_Kayit
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            if
+                (
+               string.IsNullOrEmpty(Txtid.Text) || string.IsNullOrEmpty(TxtAd.Text) || string.IsNullOrEmpty(TxtSoyad.Text) 
+               || string.IsNullOrEmpty(CmbSehir.Text)  || string.IsNullOrEmpty(MskMaas.Text) || string.IsNullOrEmpty(TxtMeslek.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
             baglanti.Open();
             SqlCommand komutguncelle = new SqlCommand(
                "Update Tbl_Personel set PerAd=@a1,PerSoyad=@a2,PerSehir=@a3,PerMaas=@a4,PerDurum=@a5,PerMeslek=@a6 where Perid = @a7", baglanti);
