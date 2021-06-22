@@ -84,6 +84,8 @@ namespace Personel_Kayit
             baglanti.Close(); //baglanti kapat
             MessageBox.Show("Personel Başarıyla Eklendi");
 
+            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -160,6 +162,7 @@ namespace Personel_Kayit
             komutsil.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Kayıt Silindi");
+            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -191,6 +194,8 @@ namespace Personel_Kayit
             baglanti.Close();
             
             MessageBox.Show("Personel bilgileri başarı bir şekilde güncellendi");
+
+            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
         }
 
         private void Btnistatistik_Click(object sender, EventArgs e)
