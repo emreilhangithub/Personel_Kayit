@@ -221,5 +221,10 @@ namespace Personel_Kayit
             frp.Show();
 
         }
+
+        private void FrmAnaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

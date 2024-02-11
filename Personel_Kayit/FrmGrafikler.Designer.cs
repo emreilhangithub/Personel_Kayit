@@ -35,66 +35,71 @@ namespace Personel_Kayit
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGrafikler));
+            this.chartSehirler = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartMeslekMaas = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSehirler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMeslekMaas)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // chartSehirler
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartSehirler.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chartSehirler.Legends.Add(legend1);
+            this.chartSehirler.Location = new System.Drawing.Point(-4, -5);
+            this.chartSehirler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chartSehirler.Name = "chartSehirler";
+            this.chartSehirler.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Sehirler";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(345, 370);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chartSehirler.Series.Add(series1);
+            this.chartSehirler.Size = new System.Drawing.Size(535, 620);
+            this.chartSehirler.TabIndex = 0;
+            this.chartSehirler.Text = "chart1";
             // 
-            // chart2
+            // chartMeslekMaas
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chartMeslekMaas.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(351, 0);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chartMeslekMaas.Legends.Add(legend2);
+            this.chartMeslekMaas.Location = new System.Drawing.Point(527, -5);
+            this.chartMeslekMaas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chartMeslekMaas.Name = "chartMeslekMaas";
+            this.chartMeslekMaas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Meslek-Maas";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(338, 377);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            this.chartMeslekMaas.Series.Add(series2);
+            this.chartMeslekMaas.Size = new System.Drawing.Size(519, 603);
+            this.chartMeslekMaas.TabIndex = 1;
+            this.chartMeslekMaas.Text = "chart2";
             // 
             // FrmGrafikler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(692, 382);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(1038, 588);
+            this.Controls.Add(this.chartMeslekMaas);
+            this.Controls.Add(this.chartSehirler);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmGrafikler";
-            this.Text = "FrmGrafikler";
+            this.Text = "Grafik Paneli";
             this.Load += new System.EventHandler(this.FrmGrafikler_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSehirler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMeslekMaas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSehirler;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMeslekMaas;
     }
 }

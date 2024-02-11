@@ -49,7 +49,7 @@ namespace Personel_Kayit
             this.Txtid = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnRaporlar = new System.Windows.Forms.Button();
             this.BtnGrafikler = new System.Windows.Forms.Button();
             this.Btnistatistik = new System.Windows.Forms.Button();
             this.BtnTemizle = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@ namespace Personel_Kayit
             this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnCikisYap = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -252,7 +252,7 @@ namespace Personel_Kayit
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.BtnRaporlar);
             this.groupBox2.Controls.Add(this.BtnGrafikler);
             this.groupBox2.Controls.Add(this.Btnistatistik);
             this.groupBox2.Controls.Add(this.BtnTemizle);
@@ -267,15 +267,15 @@ namespace Personel_Kayit
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
-            // button1
+            // BtnRaporlar
             // 
-            this.button1.Location = new System.Drawing.Point(17, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Raporlar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnRaporlar.Location = new System.Drawing.Point(17, 280);
+            this.BtnRaporlar.Name = "BtnRaporlar";
+            this.BtnRaporlar.Size = new System.Drawing.Size(179, 30);
+            this.BtnRaporlar.TabIndex = 7;
+            this.BtnRaporlar.Text = "Raporlar";
+            this.BtnRaporlar.UseVisualStyleBackColor = true;
+            this.BtnRaporlar.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnGrafikler
             // 
@@ -459,15 +459,15 @@ namespace Personel_Kayit
             // 
             this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
+            // BtnCikisYap
             // 
-            this.button2.Location = new System.Drawing.Point(564, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 70);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Çıkış Yap";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnCikisYap.Location = new System.Drawing.Point(564, 12);
+            this.BtnCikisYap.Name = "BtnCikisYap";
+            this.BtnCikisYap.Size = new System.Drawing.Size(211, 70);
+            this.BtnCikisYap.TabIndex = 8;
+            this.BtnCikisYap.Text = "Çıkış Yap";
+            this.BtnCikisYap.UseVisualStyleBackColor = true;
+            this.BtnCikisYap.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmAnaForm
             // 
@@ -475,15 +475,17 @@ namespace Personel_Kayit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(790, 535);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnCikisYap);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmAnaForm";
-            this.Text = "Form1";
+            this.Text = "Ana Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAnaForm_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -537,8 +539,8 @@ namespace Personel_Kayit
         private System.Windows.Forms.DataGridViewCheckBoxColumn perDurumDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnRaporlar;
+        private System.Windows.Forms.Button BtnCikisYap;
     }
 }
 
