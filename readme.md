@@ -2,10 +2,10 @@
 
 ## Proje Tanıtımı 
 
-*Bu projede **.Net** kullanarak Personel masaütstü uygulaması oluşturdum. CRUD operasyonları için ado.net ve dataset kullanıldım.*
+*Bu projede **.Net** kullanarak Personel masaütstü uygulaması oluşturdum. CRUD operasyonları için ado.net ve dataset kullandım.*
 
 # Database Yedeği #
-Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://github.com/emreilhangithub/Personel_Kayit/tree/master/database
+Database kısmına [buradan](https://github.com/emreilhangithub/Personel_Kayit/tree/master/database) ulaşıp kendinize yükleyebilirsiniz. 
 
 # Proje İçeriği #
 
